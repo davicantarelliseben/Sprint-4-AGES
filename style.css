@@ -7,16 +7,53 @@
 header {
     display: flex;
     justify-content: center;
-    background-color: red;
+    justify-content: space-between;
+    background-color: rgb(63, 2, 120);
+    padding: 15px 30px;
 }
 
-.tipos {
+.containerbusca input {
+    background-color: transparent; 
+    border: none;             
+    outline: none;                
+    color: white;                  
+    width: 100%;
+    margin-left: 15px;
+}
+
+.containerbusca {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #ccc;
+  border-radius: 10px; 
+  padding: 9px 19px;
+  width: 330px; 
+  box-shadow: 0 8px 14px rgba(0,0,0,0.3);
+  margin-top: 20px;
+}
+
+.botao {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 15px; 
 }
 
-.imagemleo {
-    justify-content: center;
+.botao button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid transparent;
+    padding: 8px 16px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    font-weight: bold; 
+}
+
+.botao .btn-carrinho {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    color: white;
 }
 
 
