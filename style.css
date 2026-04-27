@@ -6,8 +6,20 @@
 
 header {
     display: flex;
+    justify-content: center;
+    background-color: red;
 }
 
-#containerfundo input:focus-visible {
-    outline: none;
+.tipos {
+    display: flex;
+    justify-content: center;
 }
+
+.imagemleo {
+    justify-content: center;
+}
+
+
+
+
+
