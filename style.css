@@ -30,8 +30,41 @@ header h1 {
     color: green;
 }
 
+/*BUSCA*/
+
+.busca {
+    display: flex;
+    background-color: #333;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    gap: 4px;
+    padding-top: 3px;
+    padding-left: 4px;
+    width: calc(100% / 3);
+    
+}
+
+.busca svg {
+    color: #ccc;
+}
+
+.busca input {
+    border: none;
+    background-color: transparent;
+    font-size: 100%;
+    width: 100%;
+    color: #ccc;
+}
+
+.busca input:focus-visible {
+    outline: none;
+}
+
+/*NAVEGAÇÃO INICIAL*/
+
 .navegaçãoinicial {
     display: flex;
+    margin: 10px;
 }
 
 .navegaçãoinicial a {
@@ -44,6 +77,8 @@ header h1 {
     color: green;
 }
 
+/*TIPOS*/
+
 .tipos {
     border-bottom: 1px solid #333;
 }
@@ -52,7 +87,7 @@ header h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 5%;
+    padding: 12px 10%;
 }
 
 .tipos a {
@@ -65,7 +100,9 @@ header h1 {
     color: green;
 }
 
-.imagemleo {
+/*ANUNCIO MISTERIOSO*/
+
+.anunciomisterioso {
     display: flex;
     justify-content: center;
     padding: 40px 10%;
