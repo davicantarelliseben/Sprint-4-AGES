@@ -18,19 +18,41 @@ header {
     outline: none;                
     color: white;                  
     width: 100%;
-    margin-left: 15px;
+    font-size: 14px;
+    margin-right: 10px;
 }
 
 .containerbusca {
   display: flex;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0);
-  border: 1px solid #ccc;
-  border-radius: 10px; 
-  padding: 9px 19px;
-  width: 330px; 
-  box-shadow: 0 8px 14px rgba(0,0,0,0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px; 
+  padding: 8px 15px;
+  width: 350px; 
   margin-top: 20px;
+  transition: 0.3s;
+}
+
+.conatinerbusca:focus-within {
+    background-color: rgba(255,255,255,0.2);
+    border-color: white;
+
+}
+
+.containerbusca input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.containerbusca svg {
+    fill: white; 
+    width: 16px;  
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.containerbusca:hover svg {
+    transform: scale(1.2) rotate(10deg); 
 }
 
 .botao {
@@ -56,6 +78,18 @@ header {
     color: white;
 }
 
+
+
+
+
+
+
+
+
+
+.tipos .destaque {
+    color:red;
+}
 
 
 
