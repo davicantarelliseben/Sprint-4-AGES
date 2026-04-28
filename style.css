@@ -11,6 +11,12 @@ body {
     color: white;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 header {
     width: 100%;
     display: flex;
@@ -65,6 +71,8 @@ header h1 {
     padding: 40px 10%;
 }
 
+/*RECOMENDAÇÕES*/
+
 .recomendados {
     padding: 20px 5%;
 }
@@ -75,21 +83,22 @@ header h1 {
 }
 
 .recomendados ul {
+    width: 100%;
     display: flex;
+    flex-direction: row;
     gap: 16px;
-    overflow-x: auto; 
+    
 }
 
 .recomendados li {
     background-color: #1a1a1a;
     border-radius: 12px;
-    padding: 12px;
-    min-width: 180px;
-    flex-shrink: 0;
+    width: calc(100% / 5);
+    padding: 20px;
 }
 
 .imagemprodutorecomendado {
-    position: relative;
+    
     background-color: white;
     border-radius: 8px;
     height: 150px;
@@ -119,4 +128,212 @@ header h1 {
     color: white;
     font-size: 22px;
     font-weight: bold;
+}
+
+/*POPULARES*/
+
+.marcaspopulares {
+    padding: 20px 5%;
+}
+
+.marcaspopulares h2 {
+    margin-bottom: 20px;
+    font-size: 27px;
+}
+
+.marcaspopulares ul {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    flex-direction: row;
+}
+
+.marcaspopulares li {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    width: calc(100% / 5);
+    padding: 10px;
+}
+
+.imgpopular {
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgpopular img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.infopopular {
+    padding: 10px 4px 4px;
+}
+
+.infopopular h3 {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+/*TENIS HOME*/
+
+.tenishome {
+    padding: 20px 5%;
+}
+
+.tenishome h2 {
+    margin-bottom: 20px;
+    font-size: 27px;
+}
+
+.tenishome ul {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    flex-direction: row;
+}
+
+.tenishome li {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    width: calc(100% / 5);
+    padding: 10px;
+}
+
+.imgtenishome {
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgtenishome img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.infotenishome {
+    padding: 10px 4px 4px;
+}
+
+.infotenishome h3 {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+/*MOLETOM HOME*/
+
+.moletomhome {
+    padding: 20px 5%;
+}
+
+.moletomhome h2 {
+    margin-bottom: 20px;
+    font-size: 27px;
+}
+
+.moletomhome ul {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    flex-direction: row;
+}
+
+.moletomhome li {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    width: calc(100% / 5);
+    padding: 10px;
+}
+
+.imgmoletomhome {
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgmoletomhome img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.infomoletomhome {
+    padding: 10px 4px 4px;
+}
+
+.infomoletomhome h3 {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+/*CAMISETAS HOME*/
+
+.camisetashome {
+    padding: 20px 5%;
+}
+
+.camisetashome h2 {
+    margin-bottom: 20px;
+    font-size: 27px;
+}
+
+.camisetashome ul {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    flex-direction: row;
+}
+
+.camisetashome li {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    width: calc(100% / 5);
+    padding: 10px;
+}
+
+.imgcamisetashome {
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgcamisetashome img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.infocamisetashome {
+    padding: 10px 4px 4px;
+}
+
+.infocamisetashome h3 {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 4px;
 }
