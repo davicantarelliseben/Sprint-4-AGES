@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #111;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background-color: black;
+}
+
+header h1 {
+    color: green;
+}
+
+/*BUSCA*/
+
+.busca {
+    display: flex;
+    background-color: #333;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    gap: 4px;
+    padding-top: 3px;
+    padding-left: 4px;
+    width: calc(100% / 3);
+    
+}
+
+.busca svg {
+    color: #ccc;
+}
+
+.busca input {
+    border: none;
+    background-color: transparent;
+    font-size: 100%;
+    width: 100%;
+    color: #ccc;
+}
+
+.busca input:focus-visible {
+    outline: none;
+}
+
+/*NAVEGAÇÃO INICIAL*/
+
+.navegaçãoinicial {
+    display: flex;
+    margin: 10px;
+}
+
+.navegaçãoinicial a {
+    color: white;
+    padding: 20px;
+    transition: all 0.1s ease-in-out;
+}
+
+.navegaçãoinicial a:hover {
+    color: green;
+}
+
+/*TIPOS*/
+
+.tipos {
+    border-bottom: 1px solid #333;
+}
+
+.tipos ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 10%;
+}
+
+.tipos a {
+    color: #ccc;
+    font-size: 20px;
+    transition: all 0.1s ease-in-out;
+}
+
+.tipos a:hover {
+    color: green;
+}
+
+/*AREA DE COMPRAS*/
+
+.compras {
+    padding: 20px 5%;
+}
+
+.compras ul{
+    display: flex;
+    width: 100%;
+}
+
+.compras li {
+    width: calc(100% / 2);
+}
+
+.containerimagem {
+    border: solid 3px #333;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerimagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.informações {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 30px;
+
+}
