@@ -14,7 +14,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 5px;
 }
 
 header {
@@ -98,4 +98,84 @@ header h1 {
 
 .tipos a:hover {
     color: green;
+}
+
+/*CONTAINER INFORMATIVO*/
+
+.containerinformativo {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+
+.container {
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding: 20px 20px 20px;
+    border-radius: 10px;
+}
+
+.textoinform {
+    display: flex;
+    justify-content: center;
+}
+
+/*PRODUTOS*/
+
+.produtos {
+    padding: 20px 5%;
+}
+
+.produtos h2 {
+    margin-bottom: 12px;
+}
+
+.produtos ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 10px;   
+}
+
+.produtos li {
+    border-radius: 12px;
+    width: calc(100% / 4);
+    padding: 20px;
+}
+
+.imagemprodutos {
+    border: solid 3px #333;
+    background-color: white;
+    border-radius: 8px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagemprodutos img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.infoprodutos {
+    padding: 10px 4px 4px;
+}
+
+.infoprodutos h3 {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.preco {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
 }
