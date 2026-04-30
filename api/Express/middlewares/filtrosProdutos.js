@@ -1,6 +1,7 @@
-function filtroProdutos(query) {
+function filtrosProdutos(query) {
     let filtros = {};
 
+    if(query.id) {filtros._id = query.id};
     if(query.marca) {filtros.marca = query.marca};
     if(query.tamanho) {filtros.tamanho = query.tamanho};
     if(query.cor) {filtros.cor = query.cor};
@@ -9,4 +10,4 @@ function filtroProdutos(query) {
     return filtros;
 };
 
-export default filtroProdutos;
+export default filtrosProdutos;
