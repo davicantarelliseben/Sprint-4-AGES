@@ -1,45 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StockX</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
     <header>
         <ul>
-            <li><h1>StockX</h1>
-        </li>
-            <li>
-                <input placeholder="Pesquisa">
+            <li><a href="/src/home"><h1>StockX</h1></a></li>
+            <li id="inputLi">
+                <input placeholder="Pesquisar">
+                <i class="fa-solid fa-magnifying-glass" style="color: #121212;"></i>
             </li>
         </ul>
 
         <ul>
-            <li><a>Home</a></li>
-            <li><a>Sobre</a></li>
-            <li><a>Contato</a></li>
-            <li><a>Carrinho</a></li>
+            <li><a href="/src/home/index.html">Home</a></li>
+            <li><a href="/src//manutencao/">Sobre</a></li>
+            <li><a href="/src/manutencao/">Contato</a></li>
+            <li><a><i class="fa-solid fa-cart-shopping" style="color: #FFF;"></i></a></li>
         </ul>
     </header>
 
     <nav>
         <ul>
-            <li><a>Todos</a></li>
-            <li><a style="color: coral;">Marcas</a></li>
-            <li><a>Homem</a></li>
-            <li><a>Mulher</a></li>
-            <li><a>Tenis</a></li>
-            <li><a>Moeltons</a></li>
-            <li><a>Acessorios</a></li>
-            <li><a>Pelucias</a></li>
+            <li><a href="/src/produtos/">Todos</a></li>
+            <li><a href="/src/marcas/" style="color: coral;">Marcas</a></li>
+            <li><a href="/src/manutencao/">Homem</a></li>
+            <li><a href="/src/manutencao/">Mulher</a></li>
+            <li><a href="/src/produtos/index.html?tipo=tenis">Tenis</a></li>
+            <li><a href="/src/produtos/?tipo=camiseta">Camisetas</a></li>
+            <li><a href="/src/produtos/?tipo=moletom">Moletons</a></li>
+            <li><a href="/src/produtos/?tipo=acessorio">Acessorios</a></li>
+            <li><a href="/src/produtos/?tipo=pelucia">Pelucias</a></li>
         </ul>
     </nav>
 
     <main>
         <div id="filtros">
             <h4>Filtros</h4>
+
+            <div id="filtroCores">
+                <p>Cores</p>
+
+                <input type="radio" name="cor" id="preto">
+                <label for="preto" class="circle" style="background-color: #000; border: 1px solid #555;"></label>
+
+                <input type="radio" name="cor" id="branco">
+                <label for="branco" class="circle" style="background-color: #fff;"></label>
+
+                <input type="radio" name="cor" id="cinza">
+                <label for="cinza" class="circle" style="background-color: #8e9396;"></label>
+
+                <input type="radio" name="cor" id="azul">
+                <label for="azul" class="circle" style="background-color: #0056ff;"></label>
+
+                <input type="radio" name="cor" id="vermelho">
+                <label for="vermelho" class="circle" style="background-color: #c62d1f;"></label>
+
+                <input type="radio" name="cor" id="amarelo">
+                <label for="amarelo" class="circle" style="background-color: #f1b317;"></label>
+
+                <input type="radio" name="cor" id="marrom">
+                <label for="marrom" class="circle" style="background-color: #4a342f;"></label>
+
+                <input type="radio" name="cor" id="rosa">
+                <label for="rosa" class="circle" style="background-color: #f1c3be;"></label>
+
+                <input type="radio" name="cor" id="roxo">
+                <label for="roxo" class="circle" style="background-color: #4f4ba0;"></label>
+
+                <input type="radio" name="cor" id="verde">
+                <label for="verde" class="circle" style="background-color: #00b445;"></label>
+
+                <input type="radio" name="cor" id="laranja">
+                <label for="laranja" class="circle" style="background-color: #e55132;"></label>
+            </div>
+
+            <div class="filtroTamanhos" id="filtroLetra">
+                <p>Tamanhos</p>
+                
+                <input type="radio" name="tamanho" id="size-pp">
+                <label for="size-pp">PP</label>
+
+                <input type="radio" name="tamanho" id="size-p">
+                <label for="size-p">P</label>
+
+                <input type="radio" name="tamanho" id="size-m">
+                <label for="size-m">M</label>
+
+                <input type="radio" name="tamanho" id="size-g">
+                <label for="size-g">G</label>
+
+                <input type="radio" name="tamanho" id="size-gg">
+                <label for="size-gg">GG</label>
+            </div>
+
+            <div class="filtroTamanhos" id="filtroNumero">
+                <p>Tamanhos</p>
+                
+                <input type="radio" name="tamanho" id="36">
+                <label for="36">36</label>
+
+                <input type="radio" name="tamanho" id="37">
+                <label for="37">37</label>
+
+                <input type="radio" name="tamanho" id="38">
+                <label for="38">38</label>
+
+                <input type="radio" name="tamanho" id="39">
+                <label for="39">39</label>
+
+                <input type="radio" name="tamanho" id="41">
+                <label for="41">41</label>
+
+                <input type="radio" name="tamanho" id="42">
+                <label for="42">42</label>
+
+                <input type="radio" name="tamanho" id="43">
+                <label for="43">43</label>
+
+                <input type="radio" name="tamanho" id="44">
+                <label for="44">44</label>
+            </div>
+
         </div>
 
         <div id="produtos">
@@ -49,144 +138,11 @@
             </ul>
 
             <ul id="todosProdutos">
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
-
-                <li>
-                    <img src="https://images.stockx.com/images/Air-Jordan-5-Retro-White-Metallic-2026-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=60&dpr=1&trim=color&updated_at=1775837191">
-                    <p>Jordan Name</p>
-                    <h3>R$: 167</h3>
-                </li>
             </ul>
         </div>
     </main>
 
-    <footer>
-        <h5>StockX</h5>
-        <p>©2026 StockX. All Rights Reserved.</p>
-    </footer>
+    <script src="./script.js"></script>
 </body>
+
 </html>

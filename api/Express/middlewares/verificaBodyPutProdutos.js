@@ -1,17 +1,20 @@
 function verificaBodyPutProdutos(dadosRecebidos) {
+    // Vamos extrair os valores para facilitar a leitura
+    const d = dadosRecebidos;
 
     if(
-        dadosRecebidos.marca == null &&
-        dadosRecebidos.modelo == null &&
-        dadosRecebidos.tamanho == null &&
-        dadosRecebidos.tipo == null &&
-        dadosRecebidos.cor == null &&
-        dadosRecebidos.genero == null &&
-        dadosRecebidos.anoLancamento == null &&
-        dadosRecebidos.preco == null &&
-        dadosRecebidos.quantidade == null &&
-        dadosRecebidos.descricao == null
-    ) {throw new Error("Nenhum dados foi digitado para modificar")};
-};
+        (d.marca == null) &&
+        (d.modelo == null) &&
+        (d.estoque == null) &&
+        (d.tipo == null) &&
+        (d.cor == null) &&
+        (d.genero == null) &&
+        (d.anoLancamento == null) &&
+        (d.preco == null) &&
+        (d.descricao == null)
+    ) {
+        throw new Error("Nenhum dado foi digitado para modificar");
+    }
+}
 
 export default verificaBodyPutProdutos;

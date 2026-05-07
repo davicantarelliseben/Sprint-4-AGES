@@ -4,6 +4,7 @@ import filtrosProdutos from "../middlewares/filtrosProdutos.js";
 import verificaBodyPostProdutos from "../middlewares/verificaBodyPostProdutos.js";
 import verificaDeleteProduto from "../middlewares/verificaDeleteProduto.js";
 import verificaBodyPutProdutos from "../middlewares/verificaBodyPutProdutos.js";
+import trataNome from "../middlewares/trataNome.js";
 const routerProdutos = express.Router();
 
 
@@ -11,9 +12,13 @@ const routerProdutos = express.Router();
 routerProdutos.get("/", async (req, res) => {
     try {
         const dadosRecebidos = req.query;
-        let filtros = filtrosProdutos(dadosRecebidos);
 
-        res.status(200).send(await produtos.find(filtros));
+        let filtros = filtrosProdutos(dadosRecebidos);
+        const produtosEncontrados = await produtos.find(filtros).sort({modelo: 1})
+        
+        if(produtosEncontrados.length <= 0) {throw new Error("Nenhum produto encontrado")}
+
+        res.status(200).send(produtosEncontrados);
     } catch(erro) {
         res.status(400).send({message: erro.message});
     };
@@ -23,7 +28,9 @@ routerProdutos.get("/", async (req, res) => {
 // POSTA JSON
 routerProdutos.post("/", async (req, res) => {
     try {
-        const dadosRecebidos = req.body;
+        let dadosRecebidos = req.body;
+        dadosRecebidos = trataNome(dadosRecebidos);
+
         verificaBodyPostProdutos(dadosRecebidos);
 
         const produtoCriado = await produtos.create(dadosRecebidos);
@@ -36,17 +43,26 @@ routerProdutos.post("/", async (req, res) => {
 // MODIFICA JSON
 routerProdutos.put("/", async (req, res) => {
     try {
-        const dadosRecebidos = req.body;
+        // Se o body vier como array [{}], pegamos o primeiro item. 
+        // Se vier como objeto {}, usamos ele mesmo.
+        const dadosRecebidos = Array.isArray(req.body) ? req.body[0] : req.body;
+
+        // Agora a validação vai funcionar porque 'dadosRecebidos.modelo' existirá
         verificaBodyPutProdutos(dadosRecebidos);
 
         const produtoModificado = await produtos.updateOne(
-            {_id: dadosRecebidos.id},
+            { _id: dadosRecebidos.id },
             { $set: dadosRecebidos }
         );
+
+        if (produtoModificado.matchedCount === 0) {
+            return res.status(404).send({ Erro: "Produto não encontrado." });
+        }
+
         res.status(200).send(produtoModificado);
     } catch(erro) {
-        res.status(400).send({Erro: erro.message});
-    };
+        res.status(400).send({ Erro: erro.message });
+    }
 });
 
 // DELETA PELO ID

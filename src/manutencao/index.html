@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body> 
+    <header>
+        <ul>
+            <li><a href="/src/home"><h1>StockX</h1></a></li>
+            <li id="inputLi">
+                <input placeholder="Pesquisar">
+                <i class="fa-solid fa-magnifying-glass" style="color: #121212;"></i>
+            </li>
+        </ul>
+
+        <ul>
+            <li><a href="/src/home/index.html">Home</a></li>
+            <li><a href="/src//manutencao/">Sobre</a></li>
+            <li><a href="/src/manutencao/">Contato</a></li>
+            <li><a><i class="fa-solid fa-cart-shopping" style="color: #FFF;"></i></a></li>
+        </ul>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/src/produtos/">Todos</a></li>
+            <li><a href="/src/marcas/" style="color: coral;">Marcas</a></li>
+            <li><a href="/src/manutencao/">Homem</a></li>
+            <li><a href="/src/manutencao/">Mulher</a></li>
+            <li><a href="/src/produtos/index.html?tipo=tenis">Tenis</a></li>
+            <li><a href="/src/produtos/?tipo=camiseta">Camisetas</a></li>
+            <li><a href="/src/produtos/?tipo=moletom">Moletons</a></li>
+            <li><a href="/src/produtos/?tipo=acessorio">Acessorios</a></li>
+            <li><a href="/src/produtos/?tipo=pelucia">Pelucias</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Em manutenção</h2>
+    </main>
+
+    <footer>
+        <h5>StockX</h5>
+        <p>©2026 StockX. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const text = document.querySelector("h2");
+        let contador = 0;
+
+        setInterval(() => {
+            switch(contador) {
+                case 0: text.innerText = "Em manutenção.";
+                contador++;
+                break;
+                case 1: text.innerText = "Em manutenção..";
+                contador++;
+                break;
+                case 2: text.innerText = "Em manutenção...";
+                contador = 0;
+                break;
+            };
+        },500)
+    </script>
+</body>
+</html>

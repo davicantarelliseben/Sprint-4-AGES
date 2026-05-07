@@ -6,10 +6,23 @@ function filtrosProdutos(query) {
     if(query.marca) {filtros.marca = query.marca};
     if(query.tamanho) {filtros.tamanho = query.tamanho};
     if(query.cor) {filtros.cor = query.cor};
-    if(query.genero) {filtros.genero = query.genero};
+    if(query.genero) {generoUnisex()};
+    if(query.tipo) {filtros.tipo = query.tipo};
 
     // FILTROS INEXISTENTES
-    
+    function generoUnisex() {
+        if(query.genero == "feminino") {
+            filtros.genero = {$in: ["feminino", "unisex"]};
+        } else
+
+        if(query.genero == "masculino") {
+            filtros.genero = {$in: ["masculino", "unisex"]};
+        } else
+        
+        {
+            filtros.genero = query.genero;
+        };
+    };
 
     return filtros;
 };

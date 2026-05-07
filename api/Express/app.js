@@ -2,6 +2,7 @@ import express from "express";
 import conectaMongo from "../Mongo/ConectaMongo.js";
 import routerProdutos from "./Routes/produtos.js";
 import routerHome from "./Routes/home.js";
+import routerMarcas from "./Routes/marcas.js";
 
 const urlMongo = "mongodb+srv://BaltazarD:Mongao123@cluster0.u8yjii5.mongodb.net/stockx?appName=Cluster0";
 
@@ -9,6 +10,17 @@ const app = express();
 const porta = 3000;
 
 app.use(express.json());
+
+app.use((err, req, res, next) => {
+    res.status(400).json({ erro: "Formato JSON inválido" });
+});
+
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    next();
+});
 
 app.listen(porta, async () => {
 
@@ -26,3 +38,6 @@ app.use("/", routerHome);
 
 // ROTA /PRODUTOS
 app.use("/produtos", routerProdutos);
+
+// ROTA /MARCAS
+app.use("/marcas", routerMarcas);
