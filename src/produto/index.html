@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="/src/home">
+                    <h1>StockX</h1>
+                </a></li>
+            <li id="inputLi">
+                <input placeholder="Pesquisar">
+                <i class="fa-solid fa-magnifying-glass" style="color: #121212;"></i>
+            </li>
+        </ul>
+
+        <ul>
+            <li><a href="/src/home/index.html">Home</a></li>
+            <li><a href="/src//manutencao/">Sobre</a></li>
+            <li><a href="/src/manutencao/">Contato</a></li>
+            <a href="/src/carrinho/" id="carrinho">
+                <li><i class="fa-solid fa-cart-shopping" style="color: #FFF;"></i></li>
+                <p>0</p>
+            </a>
+        </ul>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/src/produtos/">Todos</a></li>
+            <li><a href="/src/manutencao/" style="color: coral;">Marcas</a></li>
+            <li><a href="/src/produtos/?genero=masculino">Homem</a></li>
+            <li><a href="/src/produtos/?genero+feminino">Mulher</a></li>
+            <li><a href="/src/produtos/index.html?tipo=tenis">Tenis</a></li>
+            <li><a href="/src/produtos/?tipo=camiseta">Camisetas</a></li>
+            <li><a href="/src/produtos/?tipo=moletom">Moletons</a></li>
+            <li><a href="/src/produtos/?tipo=acessorio">Acessorios</a></li>
+            <li><a href="/src/produtos/?tipo=pelucia">Pelucias</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <div class="compras">
+            <ul class="imagemeinformações">
+                <li class="imagem">
+                    <div class="containerimagem">
+                        <img src="https://www.rbsdirect.com.br/filestore/3/5/7/3/4/3/4_ab9aa6d87a636a1/4343753_ae20f7d646e753f.jpg?w=1200&h=630&a=c&version=1575255600" alt="">
+                    </div>
+                </li>
+                <li class="informações">
+                    <div class="alinhar">
+                        <div id="marcaNome">
+                            <h2>nome produto</h2>
+                            <h3>cor/estilo</h3>
+                        </div>
+
+                        <div id="sizeAndBuy">
+                            <div class="size">
+                                <h3 class="titulotamanhos">TAMANHOS</h3>
+                                <ul class="tamanhos"></ul>
+                            </div>
+
+                            <div class="ofertapreço">
+                                <div class="containerpreço">
+                                    <div class="infos">
+                                        <h3>Compre agora por</h3>
+                                        <h2>(PREÇO)</h2>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <button class="carrinho">Adicionar ao carrinho</button>
+                                        </li>
+                                        <li>
+                                            <button class="buynow">Comprar agora</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="informaçõesfinais">
+            <h2>INFORMAÇÕES SOBRE O PRODUTO</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente voluptatum iste possimus rem, in, vitae repellendus et, adipisci deleniti obcaecati reprehenderit fugiat. Reprehenderit corporis dolorem officiis necessitatibus, numquam totam culpa?</p>
+        </div>
+
+        <div class="produtosDiv">
+            <h2>Similares</h2>
+
+            <ul></ul>
+        </div>
+
+    </main>
+
+        <footer>
+            <h5>StockX</h5>
+            <p>©2026 StockX. All Rights Reserved.</p>
+        </footer>
+
+        <script src="./script.js"></script>
+</body>
+</html>
