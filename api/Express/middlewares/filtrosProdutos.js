@@ -4,6 +4,7 @@ function filtrosProdutos(query) {
     // FILTROS EXISTENTES
     if(query.id) {filtros._id = query.id};
     if(query.marca) {filtros.marca = query.marca};
+    if(query.modelo) {filtros.modelo = query.modelo.toLowerCase().split(' ').map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1)).join(' ')};
     if(query.tamanho) {filtros.tamanho = query.tamanho};
     if(query.cor) {filtros.cor = query.cor};
     if(query.genero) {generoUnisex()};

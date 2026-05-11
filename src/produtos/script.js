@@ -7,12 +7,15 @@ async function pegaDados() {
     const tipoUrl = params.get("tipo");
     const generoUrl = params.get("genero");
     const marcaUrl = params.get("marca");
+    const modeloUrl = params.get("modelo");
 
     let url = new URL("http://localhost:3000/produtos");
 
     if (tipoUrl) { url.searchParams.append("tipo", tipoUrl) };
     if (generoUrl) { url.searchParams.append("genero", generoUrl) };
     if (marcaUrl) { url.searchParams.append("marca", marcaUrl) };
+    if(modeloUrl) {url.searchParams.append("modelo", modeloUrl)};
+    console.log(url);
 
     const res = await fetch(url);
     dados = await res.json();
@@ -41,6 +44,7 @@ async function mostraDados() {
     filtraTamanhoLetras(dados);
     filtraTamanhoNumero(dados);
     definiTipoTamanho();
+    mostraCarrinho();
 }
 
 function ordenaPorPreco(dados) {
@@ -187,6 +191,32 @@ function filtraTamanhoNumero(dados) {
         });
     });
 }
+
+async function pegaCarrinho() {
+    const url = "http://localhost:3000/carrinho";
+
+    const res = await fetch(url);
+    return await res.json();
+};
+
+async function mostraCarrinho() {
+    const num = document.querySelector("header p");
+
+    const produtosCarrinho = await pegaCarrinho();
+    console.log(produtosCarrinho.length);
+    num.innerText = await produtosCarrinho.length;
+};
+
+function pesquisaModelo() {
+    const inputRecebido = document.querySelector("#inputLi input").value;
+    const url = `/src/produtos/?modelo=${inputRecebido}`;
+
+    window.location.href = url;
+};
+
+document.querySelector("#inputLi i").addEventListener("click", () => {
+    pesquisaModelo();
+});
 
 async function inicializar() {
     await pegaDados();

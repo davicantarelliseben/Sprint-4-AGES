@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body> 
+
+<body>
     <header>
         <ul>
             <li><a href="/src/home">
@@ -33,9 +35,9 @@
     <nav>
         <ul>
             <li><a href="/src/produtos/">Todos</a></li>
-            <li><a href="/src/marcas/" style="color: coral;">Marcas</a></li>
-            <li><a href="/src/manutencao/">Homem</a></li>
-            <li><a href="/src/manutencao/">Mulher</a></li>
+            <li><a href="/src/manutencao/" style="color: coral;">Marcas</a></li>
+            <li><a href="/src/produtos/?genero=masculino">Homem</a></li>
+            <li><a href="/src/produtos/?genero+feminino">Mulher</a></li>
             <li><a href="/src/produtos/index.html?tipo=tenis">Tenis</a></li>
             <li><a href="/src/produtos/?tipo=camiseta">Camisetas</a></li>
             <li><a href="/src/produtos/?tipo=moletom">Moletons</a></li>
@@ -45,7 +47,8 @@
     </nav>
 
     <main>
-        <h2>Em manutenção</h2>
+        <ul id="todosProdutos">
+        </ul>
     </main>
 
     <footer>
@@ -55,4 +58,5 @@
 
     <script src="./main.js"></script>
 </body>
+
 </html>

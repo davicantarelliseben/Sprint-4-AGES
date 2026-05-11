@@ -2,7 +2,7 @@ import express from "express";
 import conectaMongo from "../Mongo/ConectaMongo.js";
 import routerProdutos from "./Routes/produtos.js";
 import routerHome from "./Routes/home.js";
-import routerMarcas from "./Routes/marcas.js";
+import routerCarrinho from "./Routes/carrinho.js";
 
 const urlMongo = "mongodb+srv://BaltazarD:Mongao123@cluster0.u8yjii5.mongodb.net/stockx?appName=Cluster0";
 
@@ -36,8 +36,8 @@ app.listen(porta, async () => {
 // ROTA /
 app.use("/", routerHome);
 
-// ROTA /PRODUTOS
+// ROTA /produtos
 app.use("/produtos", routerProdutos);
 
-// ROTA /MARCAS
-app.use("/marcas", routerMarcas);
+// ROTA /carrinho
+app.use("/carrinho", routerCarrinho);

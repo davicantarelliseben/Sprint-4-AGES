@@ -64,6 +64,20 @@ header input {
     padding: 0 8px;
 }
 
+#inputLi input {
+    outline: none;
+}
+
+header p {
+    font-size: 1em;
+}
+
+#carrinho {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
 /*NAV*/
 
 nav {

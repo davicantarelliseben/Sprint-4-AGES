@@ -1,5 +1,4 @@
 function verificaBodyPutProdutos(dadosRecebidos) {
-    // Vamos extrair os valores para facilitar a leitura
     const d = dadosRecebidos;
 
     if(

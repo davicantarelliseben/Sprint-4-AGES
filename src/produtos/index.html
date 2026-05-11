@@ -12,7 +12,9 @@
 <body>
     <header>
         <ul>
-            <li><a href="/src/home"><h1>StockX</h1></a></li>
+            <li><a href="/src/home">
+                    <h1>StockX</h1>
+                </a></li>
             <li id="inputLi">
                 <input placeholder="Pesquisar">
                 <i class="fa-solid fa-magnifying-glass" style="color: #121212;"></i>
@@ -23,16 +25,19 @@
             <li><a href="/src/home/index.html">Home</a></li>
             <li><a href="/src//manutencao/">Sobre</a></li>
             <li><a href="/src/manutencao/">Contato</a></li>
-            <li><a><i class="fa-solid fa-cart-shopping" style="color: #FFF;"></i></a></li>
+            <a href="/src/carrinho/" id="carrinho">
+                <li><i class="fa-solid fa-cart-shopping" style="color: #FFF;"></i></li>
+                <p>0</p>
+            </a>
         </ul>
     </header>
 
     <nav>
         <ul>
             <li><a href="/src/produtos/">Todos</a></li>
-            <li><a href="/src/marcas/" style="color: coral;">Marcas</a></li>
-            <li><a href="/src/manutencao/">Homem</a></li>
-            <li><a href="/src/manutencao/">Mulher</a></li>
+            <li><a href="/src/manutencao/" style="color: coral;">Marcas</a></li>
+            <li><a href="/src/produtos/?genero=masculino">Homem</a></li>
+            <li><a href="/src/produtos/?genero+feminino">Mulher</a></li>
             <li><a href="/src/produtos/index.html?tipo=tenis">Tenis</a></li>
             <li><a href="/src/produtos/?tipo=camiseta">Camisetas</a></li>
             <li><a href="/src/produtos/?tipo=moletom">Moletons</a></li>

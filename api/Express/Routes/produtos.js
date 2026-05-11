@@ -5,6 +5,8 @@ import verificaBodyPostProdutos from "../middlewares/verificaBodyPostProdutos.js
 import verificaDeleteProduto from "../middlewares/verificaDeleteProduto.js";
 import verificaBodyPutProdutos from "../middlewares/verificaBodyPutProdutos.js";
 import trataNome from "../middlewares/trataNome.js";
+import mongoose from 'mongoose';
+const { ObjectId } = mongoose.Types;
 const routerProdutos = express.Router();
 
 
@@ -43,15 +45,13 @@ routerProdutos.post("/", async (req, res) => {
 // MODIFICA JSON
 routerProdutos.put("/", async (req, res) => {
     try {
-        // Se o body vier como array [{}], pegamos o primeiro item. 
-        // Se vier como objeto {}, usamos ele mesmo.
         const dadosRecebidos = Array.isArray(req.body) ? req.body[0] : req.body;
+        const id = req.query.id;
 
-        // Agora a validação vai funcionar porque 'dadosRecebidos.modelo' existirá
         verificaBodyPutProdutos(dadosRecebidos);
 
         const produtoModificado = await produtos.updateOne(
-            { _id: dadosRecebidos.id },
+            { _id: new ObjectId(id) },
             { $set: dadosRecebidos }
         );
 
